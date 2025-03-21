@@ -1,11 +1,18 @@
-let mensajes = ["¡Hola!", "Espero que tengas un buen día!", "Sigue adelante!"];
+let mensajes = [
+    "Hola mi amor, quería ser un poco 'único' para darte una flor por este día",
+    "Así que he diseñado una página web solo para darte este mensaje, aunque sé que es a través de una pantalla y no una flor en persona",
+    "Te doy esta flor con todo mi corazón, y la próxima vez si te quiero dar una buena flor por un día especial en un futuro... ya verás",
+    "<img src='flor.jpeg' alt='Una flor para ti' style='width: 100px; height: auto;'>",
+    "Te quiero muchísimo, mi persona especial. Eres única ❤️"
+];
+
 let indice = 0;
 
 function mostrarMensaje() {
     let mensaje = document.getElementById("mensaje");
-    
-    // Asigna el mensaje actual
-    mensaje.innerText = mensajes[indice];
+
+    // Asigna el mensaje o imagen
+    mensaje.innerHTML = mensajes[indice];
 
     // Muestra el mensaje si está oculto
     if (mensaje.style.display === "none" || mensaje.style.display === "") {
