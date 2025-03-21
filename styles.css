@@ -1,50 +1,61 @@
 body {
+    background-image: url('fondo.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-        background-image: url('fondo.jpg'); /* Si está en la misma carpeta */
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-    font-family: Arial, sans-serif;
     margin: 0;
 }
 
+/* Contenedor del sobre */
 .sobre-container {
     position: relative;
     width: 300px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+    height: 220px;
 }
 
+/* El sobre (rectángulo) */
 .sobre {
-    width: 400%;
-    height: 200%;
+    width: 100%;
+    height: 100%;
     background-color: #FFD700;
-    position: relative;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
-
+/* La solapa (triángulo) */
 .solapa {
     position: absolute;
-    bottom: 100%; /* Lo coloca sobre el sobre */
+    top: -50px; /* Lo subimos para que quede encima */
     left: 0;
     width: 0;
     height: 0;
-    border-left: 150px solid transparent; /* Aumentar si el sobre es más grande */
+    border-left: 150px solid transparent;
     border-right: 150px solid transparent;
-    border-top: 120px solid #E6B800; /* Ajustar para que sea proporcional */
-    z-index: 2; /* Para que quede sobre el sobre */
+    border-bottom: 50px solid #E6B800; /* Ajustamos para que sea proporcional */
+    z-index: 2;
 }
+
+/* Mensaje */
+.mensaje {
+    position: absolute;
+    top: -70px; /* Lo subimos para que quede por encima del sobre */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    display: none;
+    max-width: 250px; /* Se adapta al tamaño del texto */
+    word-wrap: break-word;
+}
+
 
 
 .emoji {
@@ -57,22 +68,6 @@ body {
     transform: scale(1.05);
 }
 
-.mensaje {
-    display: none;
-    position: absolute;
-    top: 300px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    padding: 15px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    width: 250px;
-}
 
 .mensaje.mostrar {
     display: block;
