@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre con Mensajes</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .sobre {
+            width: 200px;
+            height: 150px;
+            background-color: #d2691e;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+        .mensaje {
+            display: none;
+            position: absolute;
+            top: -50px;
+            background: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="sobre" onclick="mostrarMensaje()">
+        📩
+        <div class="mensaje" id="mensaje">¡Hola! Este es tu mensaje.</div>
+    </div>
+    <script>
+        let mensajes = ["¡Hola!", "Espero que tengas un buen día!", "Sigue adelante!"];
+        let indice = 0;
+        function mostrarMensaje() {
+            let mensajeDiv = document.getElementById("mensaje");
+            mensajeDiv.innerText = mensajes[indice];
+            mensajeDiv.style.display = "block";
+            indice = (indice + 1) % mensajes.length;
+        }
+    </script>
+</body>
+</html>
