@@ -3,17 +3,18 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('fondo.jpg');
-    background-size: cover;
-    background-position: center;
+        background-image: url('fondo.jpg'); /* Si está en la misma carpeta */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
     font-family: Arial, sans-serif;
     margin: 0;
 }
 
 .sobre-container {
     position: relative;
-    width: 400px;
-    height: 250px;
+    width: 300px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,7 +25,7 @@ body {
     width: 80%;
     height: 80%;
     background-color: #FFD700;
-    position: absolute;
+    position: relative;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -32,15 +33,17 @@ body {
     align-items: center;
 }
 
+/* La solapa ahora apunta hacia abajo y está sobre el sobre */
 .solapa {
     position: absolute;
-    top: 0;
+    bottom: 100%;  /* Mueve el triángulo arriba del sobre */
     left: 0;
     width: 0;
     height: 0;
-    border-left: 200px solid transparent;
-    border-right: 200px solid transparent;
-    border-bottom: 100px solid #E6B800;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 100px solid #E6B800; /* Ahora el triángulo apunta hacia abajo */
+    z-index: 2; /* Asegura que esté por encima del sobre */
 }
 
 .emoji {
