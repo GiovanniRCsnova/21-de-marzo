@@ -4,68 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre con Mensajes</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-        }
-        .sobre {
-            width: 300px;
-            height: 200px;
-            background-color: #FFD700;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-            font-size: 40px;
-        }
-        .sobre:hover {
-            transform: scale(1.05);
-        }
-        .mensaje {
-            display: none;
-            position: absolute;
-            top: 250px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: white;
-            padding: 15px;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            width: 250px;
-        }
-        .mensaje.mostrar {
-            display: block;
-            opacity: 1;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="sobre" onclick="mostrarMensaje()">
         📩
     </div>
     <div class="mensaje" id="mensaje"></div>
-    <script>
-        let mensajes = ["¡Hola!", "Espero que tengas un buen día!", "Sigue adelante!"];
-        let indice = 0;
-        function mostrarMensaje() {
-            let mensajeDiv = document.getElementById("mensaje");
-            mensajeDiv.innerText = mensajes[indice];
-            mensajeDiv.classList.add("mostrar");
-            indice = (indice + 1) % mensajes.length;
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
