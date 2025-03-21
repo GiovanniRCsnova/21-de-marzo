@@ -8,22 +8,29 @@ body {
     margin: 0;
 }
 
-.sobre {
+.sobre-container {
+    position: relative;
     width: 400px;
     height: 250px;
-    background-color: #FFD700;
-    position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
 }
 
-.sobre::before {
-    content: '';
+.sobre {
+    width: 100%;
+    height: 100%;
+    background-color: #FFD700;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.solapa {
     position: absolute;
     top: 0;
     left: 0;
@@ -34,15 +41,14 @@ body {
     border-bottom: 100px solid #E6B800;
 }
 
-.sobre:hover {
-    transform: scale(1.05);
-}
-
 .emoji {
     font-size: 50px;
     position: relative;
     z-index: 2;
-    padding-bottom: 20px;
+}
+
+.sobre-container:hover .sobre {
+    transform: scale(1.05);
 }
 
 .mensaje {
