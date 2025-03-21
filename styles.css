@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url(https://content.cuerpomente.com/medio/2024/07/11/campo-girasoles_a0dab957_240711105700_1200x630.jpg);
+    background-image: url('fondo.jpg');
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
