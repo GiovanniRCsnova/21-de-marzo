@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: red;
+    background-image: url('fondo.jpg');
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
