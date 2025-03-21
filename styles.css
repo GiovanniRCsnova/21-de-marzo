@@ -33,18 +33,19 @@ body {
     align-items: center;
 }
 
-/* La solapa ahora apunta hacia abajo y está sobre el sobre */
+
 .solapa {
     position: absolute;
-    bottom: 100%;  /* Mueve el triángulo arriba del sobre */
+    bottom: 100%; /* Lo coloca sobre el sobre */
     left: 0;
     width: 0;
     height: 0;
-    border-left: 150px solid transparent;
+    border-left: 150px solid transparent; /* Aumentar si el sobre es más grande */
     border-right: 150px solid transparent;
-    border-top: 100px solid #E6B800; /* Ahora el triángulo apunta hacia abajo */
-    z-index: 2; /* Asegura que esté por encima del sobre */
+    border-top: 120px solid #E6B800; /* Ajustar para que sea proporcional */
+    z-index: 2; /* Para que quede sobre el sobre */
 }
+
 
 .emoji {
     font-size: 50px;
