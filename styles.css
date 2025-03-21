@@ -12,8 +12,9 @@ body {
 /* Contenedor del sobre */
 .sobre-container {
     position: relative;
-    width: 300px;
-    height: 220px;
+    width: 350px;  /* Aumentado */
+    height: 250px; /* Aumentado */
+    cursor: pointer;
 }
 
 /* El sobre (rectángulo) */
@@ -26,37 +27,36 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* La solapa (triángulo) */
 .solapa {
     position: absolute;
-    top: -50px; /* Lo subimos para que quede encima */
+    top: -60px; /* Ajustado */
     left: 0;
     width: 0;
     height: 0;
-    border-left: 150px solid transparent;
-    border-right: 150px solid transparent;
-    border-bottom: 50px solid #E6B800; /* Ajustamos para que sea proporcional */
+    border-left: 175px solid transparent;  /* Aumentado */
+    border-right: 175px solid transparent; /* Aumentado */
+    border-bottom: 60px solid #E6B800; /* Aumentado */
     z-index: 2;
 }
 
 /* Mensaje */
 .mensaje {
     position: absolute;
-    top: -70px; /* Lo subimos para que quede por encima del sobre */
+    top: -90px; /* Lo subimos más */
     left: 50%;
     transform: translateX(-50%);
     background-color: white;
-    padding: 10px;
+    padding: 15px;
     border-radius: 5px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     display: none;
-    max-width: 250px; /* Se adapta al tamaño del texto */
+    max-width: 280px; /* Ajustado */
     word-wrap: break-word;
 }
-
-
 
 .emoji {
     font-size: 50px;
