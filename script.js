@@ -4,10 +4,16 @@ let indice = 0;
 function mostrarMensaje() {
     let mensaje = document.getElementById("mensaje");
     
+    // Asigna el mensaje actual
+    mensaje.innerText = mensajes[indice];
+
+    // Muestra el mensaje si está oculto
     if (mensaje.style.display === "none" || mensaje.style.display === "") {
         mensaje.style.display = "block";
-        mensaje.style.zIndex = "3";  // Asegurar que quede encima
     } else {
         mensaje.style.display = "none";
     }
+
+    // Avanza al siguiente mensaje (vuelve al inicio si llega al final)
+    indice = (indice + 1) % mensajes.length;
 }
