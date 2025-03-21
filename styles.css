@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('https://www.buscounchollo.com/blog/app/uploads/2022/08/4.jpeg');
+    background-image: url(https://www.buscounchollo.com/blog/app/uploads/2022/08/4.jpeg);
     background-size: cover;
     background-position: center;
     font-family: Arial, sans-serif;
